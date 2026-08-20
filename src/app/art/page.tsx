@@ -1,6 +1,7 @@
 import Navbar from "@/app/navbar";
 import Image from "next/image";
 import getImagesByCreation from "@/app/gallery";
+import Footer from "@/app/footer";
 
 export default function ArtPage() {
     const images = getImagesByCreation("art");
@@ -8,9 +9,9 @@ export default function ArtPage() {
 
     return (
     <div className="font-sans min-h-screen mx-auto p-8 pb-20 gap-16 sm:p-20">
-    <Navbar />
-    <header className="text-7xl font-title font-bold text-left">my art.</header>
-    <div className="justify-left items-left">
+        <Navbar />
+        <header className="text-7xl font-title font-bold text-left">art.</header>
+        <div className="justify-left items-left">
             {dateKeys.map((day) => (
                 <section key={day}>
                 <h2 className="mt-8 mb-4 text-lg font-semibold">{day}</h2>
@@ -29,6 +30,7 @@ export default function ArtPage() {
                 </section>
             ))}
         </div>
+        <Footer />
     </div>
     );
 }

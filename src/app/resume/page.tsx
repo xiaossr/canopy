@@ -3,6 +3,7 @@
 import Navbar from "@/app/navbar"
 import { Viewer, Worker } from '@react-pdf-viewer/core';
 import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout';
+import Footer from "@/app/footer";
 
 function PdfViewer({ url }: { url: string }) {
     const defaultLayout = defaultLayoutPlugin();
@@ -19,8 +20,9 @@ export default function ResumePage() {
     return (
         <div className="font-sans min-h-screen mx-auto p-8 pb-20 gap-16 sm:p-20">
             <Navbar />
-            <header className="text-7xl font-title font-bold text-left mb-12">Resume</header>
+            <header className="text-7xl font-title font-bold text-left mb-12">resume;</header>
             <PdfViewer url="/resume.pdf" />
+            <Footer />
         </div>
     )
 }
