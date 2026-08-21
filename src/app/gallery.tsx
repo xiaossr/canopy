@@ -13,17 +13,22 @@ export default function getImagesByCreation(subdir: string): Record<string, Img[
         timeZone: "UTC",
     });
 
-   const imgs: Img[] = fs
+    const imgs: Img[] = fs
         .readdirSync(IMG_DIR)
         .filter((f) => exts.has(path.extname(f).toLowerCase()))
+        .sort((a, b) => b.localeCompare(a)) 
         .map((f) => {
-        const p = path.join(IMG_DIR, f);
-        const st = fs.statSync(p);
-            const ts = st.birthtime ? st.birthtime : st.mtime;
+            const dateMatch = f.match(/^(\d{4}-\d{2}-\d{2}_\d{6})/);
+            let ts = new Date();
+            
+            if (dateMatch) {
+                const ds = dateMatch[1].replace("_", "T").replace(/(\d{2})(\d{2})$/, ":$1:$2");
+                ts = new Date(ds);
+            }
+
             const dayKey = formatter.format(ts);
             return { src: `/art/${f}`, ts, dayKey };
-        })
-        .sort((a, b) => b.ts.getTime() - a.ts.getTime());
+        });
 
     return imgs.reduce<Record<string, Img[]>>((acc, img) => {
         (acc[img.dayKey] ||= []).push(img);
