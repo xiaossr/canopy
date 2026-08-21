@@ -21,13 +21,13 @@ const projects: Project[] = [
     //     href: "https://github.com/xiaossr",
     //     year: "2025",
     // },
-    // {
-    //     title: "placeholder project",
-    //     blurb:
-    //         "A short description of what the project does, what problem it solves, and what made it interesting to build.",
-    //     stack: ["python", "postgres"],
-    //     year: "2025",
-    // },
+    {
+        title: "placeholder project",
+        blurb:
+            "placeholder summary.",
+        stack: ["temp1", "temp2"],
+        year: "2025",
+    },
     // {
     //     title: "another placeholder",
     //     blurb:
