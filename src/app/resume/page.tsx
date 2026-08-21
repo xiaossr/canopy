@@ -1,6 +1,8 @@
 "use client";
 
 import Navbar from "@/app/navbar"
+import AnchorGutter from "@/app/anchors"
+import PageVine from "@/app/pagevine";
 import { Viewer, Worker } from '@react-pdf-viewer/core';
 import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout';
 import Footer from "@/app/footer";
@@ -18,10 +20,16 @@ function PdfViewer({ url }: { url: string }) {
 
 export default function ResumePage() {
     return (
-        <div className="font-sans min-h-screen mx-auto p-8 pb-20 gap-16 sm:p-20">
+        <div className="font-sans min-h-screen mx-auto max-w-5xl px-6 py-10 sm:py-16">
             <Navbar />
-            <header className="text-7xl font-title font-bold text-left mb-12">resume;</header>
+            <div className="relative lg:grid lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-10">
+                <PageVine />
+                <AnchorGutter />
+                <main className="max-w-3xl">
+                    <header className="font-title text-4xl sm:text-5xl font-semibold tracking-tight text-left mb-8">resume</header>
             <PdfViewer url="/resume.pdf" />
+                </main>
+            </div>
             <Footer />
         </div>
     )

@@ -2,6 +2,7 @@ import '@react-pdf-viewer/core/lib/styles/index.css';
 import '@react-pdf-viewer/default-layout/lib/styles/index.css';
 import type { Metadata } from "next";
 import { Montserrat, Newsreader } from "next/font/google";
+import Backdrop from "@/app/backdrop";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -16,7 +17,7 @@ const newsreader = Newsreader({
 });
 
 export const metadata: Metadata = {
-    title: "tina wang",
+    title: "canopy",
     description: "personal website",
 };
 
@@ -30,6 +31,7 @@ export default function RootLayout({
         <body
             className={`${montserrat.variable} ${newsreader.variable} antialiased`}
         >
+            <Backdrop />
             {children}
         </body>
     </html>
