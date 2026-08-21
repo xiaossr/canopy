@@ -4,12 +4,12 @@ import PageVine from "@/app/pagevine";
 import Footer from "@/app/footer";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getPostBySlug, getAllPosts } from "@/lib/posts";
+import { getAllPosts, getPostBySlug } from "@/lib/posts";
 import Markdown from "react-markdown";
 
 export function generateStaticParams() {
-    const thoughts = getAllPosts("thoughts");
-    return thoughts.map((p) => ({ slug: p.slug }));
+    const projects = getAllPosts("projects");
+    return projects.map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({
@@ -18,7 +18,7 @@ export async function generateMetadata({
     params: Promise<{ slug: string }>;
 }) {
     const { slug } = await params;
-    const post = getPostBySlug("thoughts", slug);
+    const post = getPostBySlug("projects", slug);
     return {
         title: post ? `${post.title} — canopy` : "canopy",
         description: post?.summary,
@@ -31,7 +31,7 @@ export default async function PostPage({
     params: Promise<{ slug: string }>;
 }) {
     const { slug } = await params;
-    const post = getPostBySlug("thoughts", slug);
+    const post = getPostBySlug("projects", slug);
 
     if (!post) notFound();
 
@@ -71,10 +71,10 @@ export default async function PostPage({
                         </div>
                     </article>
                     <Link
-                        href="/thoughts"
+                        href="/projects"
                         className="text-sm text-[color:var(--muted)] underline decoration-[color:var(--thistle)] hover:text-[color:var(--deep-teal)] hover:decoration-[color:var(--rosy-taupe)]"
                     >
-                        back to writings
+                        back to projects
                     </Link>
                 </main>
             </div>

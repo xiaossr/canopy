@@ -3,10 +3,10 @@ import AnchorGutter from "@/app/anchors"
 import PageVine from "@/app/pagevine";
 import Footer from "@/app/footer";
 import Link from "next/link";
-import { formatDate, getSortedPosts } from "@/app/thoughts/posts";
+import { getAllPosts } from "@/lib/posts";
 
 export default function WritingPage() {
-    const entries = getSortedPosts();
+    const entries = getAllPosts("thoughts");
 
     return (
         <div className="font-sans min-h-screen mx-auto max-w-4xl px-6 py-10 sm:py-16">
@@ -31,7 +31,7 @@ export default function WritingPage() {
                                     </Link>
                                 </h2>
                                 <div className="flex flex-wrap items-center gap-3 text-xs text-[color:var(--rosy-taupe)]">
-                                    <time dateTime={post.date}>{formatDate(post.date)}</time>
+                                    <time dateTime={post.date}>{post.date}</time>
                                     {post.tags.map((t) => (
                                         <span
                                             key={t}
