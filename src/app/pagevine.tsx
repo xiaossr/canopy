@@ -70,7 +70,7 @@ export default function PageVine() {
             <svg
                 viewBox="0 0 8 100"
                 preserveAspectRatio="none"
-                className="h-full w-full overflow-visible text-[color:var(--rule)]"
+                className="h-full w-full overflow-visible text-(--rule)"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="1"
@@ -88,7 +88,7 @@ export default function PageVine() {
             {leafOffsets.map((offset, i) => (
                 <span
                     key={offset}
-                    className={`absolute -left-1 text-[color:var(--palm-leaf)] transition-opacity duration-500 ${
+                    className={`absolute -left-1 text-(--palm-leaf) transition-opacity duration-500 ${
                         drawn >= offset ? "opacity-70" : "opacity-0"
                     }`}
                     style={{

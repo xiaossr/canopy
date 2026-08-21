@@ -42,15 +42,15 @@ function NavLink({
             aria-current={active ? "page" : undefined}
             className={`group inline-flex items-center gap-2 transition-colors ${
                 active
-                    ? "font-medium text-[color:var(--deep-teal)]"
-                    : "text-[color:var(--muted)] hover:text-[color:var(--deep-teal)]"
+                    ? "font-medium text-(--deep-teal)"
+                    : "text-(--muted) hover:text-(--deep-teal)"
             }`}
         >
             <span
                 className={`transition-colors ${
                     active
-                        ? "text-[color:var(--rosy-taupe)]"
-                        : "text-[color:var(--palm-leaf)] group-hover:text-[color:var(--rosy-taupe)]"
+                        ? "text-(--rosy-taupe)"
+                        : "text-(--palm-leaf) group-hover:text-(--rosy-taupe)"
                 }`}
             >
                 <LeafIcon />
@@ -58,8 +58,8 @@ function NavLink({
             <span
                 className={`underline underline-offset-4 ${
                     active
-                        ? "decoration-[color:var(--thistle)]"
-                        : "decoration-transparent group-hover:decoration-[color:var(--thistle)]"
+                        ? "decoration-(--thistle)"
+                        : "decoration-transparent group-hover:decoration-(--thistle)"
                 }`}
             >
                 {label}

@@ -11,10 +11,10 @@ const links = [
 
 export default function Navbar() {
     return (
-        <header className="bg-background relative sticky top-0 z-50 mb-16 flex w-full items-center justify-between p-3 opacity-90">
+        <header className="bg-background relative top-0 z-50 mb-16 flex w-full items-center justify-between p-3 opacity-90">
             <Link
                 href="/"
-                className="text-[color:var(--deep-teal)] transition-colors hover:text-[color:var(--palm-leaf)]"
+                className="text-(--deep-teal) transition-colors hover:text-(--palm-leaf)"
             >
                 canopy .☘︎ ݁˖
             </Link>
@@ -24,7 +24,7 @@ export default function Navbar() {
                         <Link
                             key={href}
                             href={href}
-                            className={`mx-3 text-sm text-[color:var(--deep-teal)] transition-colors hover:text-[color:var(--palm-leaf)]`}
+                            className={`mx-3 text-sm text-(--deep-teal) transition-colors hover:text-(--palm-leaf)`}
                         >
                             {label}
                         </Link>
@@ -36,13 +36,13 @@ export default function Navbar() {
                     className="h-px w-full"
                     style={{ background: "var(--rule)" }}
                 />
-                <span className="absolute -bottom-1.5 left-6 text-[color:var(--palm-leaf)]">
+                <span className="absolute -bottom-1.5 left-6 text-(--palm-leaf)">
                     <LeafIcon className="h-3 w-3" />
                 </span>
-                <span className="absolute -bottom-1 left-1/3 rotate-12 text-[color:var(--rule)]">
+                <span className="absolute -bottom-1 left-1/3 rotate-12 text-(--rule)">
                     <LeafIcon className="h-2.5 w-2.5" />
                 </span>
-                <span className="absolute right-10 -bottom-1.5 -rotate-12 text-[color:var(--palm-leaf)]">
+                <span className="absolute right-10 -bottom-1.5 -rotate-12 text-(--palm-leaf)">
                     <LeafIcon className="h-3 w-3" />
                 </span>
             </div>

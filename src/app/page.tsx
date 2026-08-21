@@ -11,10 +11,10 @@ export default function Home() {
                 <PageVine />
                 <AnchorGutter />
                 <main className="flex max-w-3xl flex-col gap-8 sm:items-start">
-                    <header className="font-title text-left text-4xl font-semibold tracking-tight text-[color:var(--deep-teal)] sm:text-5xl">
+                    <header className="font-title text-left text-4xl font-semibold tracking-tight text-(--deep-teal) sm:text-5xl">
                         tina wang
                     </header>
-                    <section className="font-sans text-base leading-7 text-[color:var(--ink)]">
+                    <section className="font-sans text-base leading-7 text-(--ink)">
                         <p className="my-5">
                             Hi! I&apos;m Tina, and I&apos;m currently a junior
                             at MIT studying computer science and engineering.
