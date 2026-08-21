@@ -15,8 +15,8 @@ export default function Home() {
             <section className="font-sans text-base leading-7 text-[color:var(--ink)]">
                 <p className="my-5">
                     Hi! I&apos;m Tina, and I&apos;m currently a junior at MIT studying computer science and engineering.
-                    I'm interested in systems, AI, and works that intersect computer science and other fields. Before this,
-                    I represented the USA at the European Girls' Olympiad in Informatics.
+                    I&apos;m interested in systems, AI, and works that intersect computer science and other fields. Before this,
+                    I represented the USA at the European Girls&apos; Olympiad in Informatics.
                 </p>
                 <p className="my-5">
                     My goal is to experience myriads of different perspectives and ideas (and to share my own as well!).
