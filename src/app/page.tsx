@@ -6,7 +6,7 @@ import Footer from "@/app/footer";
 
 export default function Home() {
   return (
-    <div className="font-sans min-h-screen mx-auto max-w-5xl px-6 py-10 sm:py-16">
+    <div className="font-sans min-h-screen mx-auto max-w-4xl px-6 py-10 sm:py-16">
         <Navbar />
         <div className="relative lg:grid lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-10">
           <PageVine />
@@ -15,18 +15,15 @@ export default function Home() {
             <header className="font-title text-4xl sm:text-5xl font-semibold tracking-tight text-left text-[color:var(--deep-teal)]">tina wang</header>
             <section className="font-sans text-base leading-7 text-[color:var(--ink)]">
                 <p className="my-5">
-                    Hi! I&apos;m Tina, and I&apos;m a computer science major especially interested in systems
-                    and solving interesting problems. I love exploring the interactions that arise
-                    between humans and their environment. Talk to me about anything CS, philosophy,
-                    chinese history, art, state-of-the-world :).
+                    Hi! I&apos;m Tina, and I&apos;m currently a junior at MIT studying computer science and engineering.
+                    I'm interested in systems, AI, and works that intersect computer science and other fields. Before this,
+                    I represented the USA at the European Girls' Olympiad in Informatics.
                 </p>
                 <p className="my-5">
-                    My dream is to have experienced myriads of different cultures, encounters, tastes, and 
-                    everything that the world has to offer, and to produce something in return that grants
-                    a new experience or feeling back to the world.
+                    My goal is to experience myriads of different perspectives and ideas (and to share my own as well!).
                 </p>
             </section>
-            <div className="flex flex-wrap gap-6 font-sans text-sm">
+            {/* <div className="flex flex-wrap gap-6 font-sans text-sm">
                 <Link 
                     href="mailto:txw@mit.edu"
                     className="text-[color:var(--muted)] underline decoration-[color:var(--thistle)] hover:text-[color:var(--deep-teal)] hover:decoration-[color:var(--rosy-taupe)]"
@@ -45,7 +42,7 @@ export default function Home() {
                 >
                     github
                 </Link>
-            </div>
+            </div> */}
           </main>
         </div>
         <Footer />
