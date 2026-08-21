@@ -34,7 +34,7 @@ export default async function PostPage({
     if (!post) notFound();
 
     return (
-        <div className="font-sans min-h-screen mx-auto max-w-5xl px-6 py-10 sm:py-16">
+        <div className="font-sans min-h-screen mx-auto max-w-4xl px-6 py-10 sm:py-16">
             <Navbar />
             <div className="relative lg:grid lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-10">
                 <PageVine />
