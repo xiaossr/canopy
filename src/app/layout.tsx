@@ -1,5 +1,3 @@
-import '@react-pdf-viewer/core/lib/styles/index.css';
-import '@react-pdf-viewer/default-layout/lib/styles/index.css';
 import type { Metadata } from "next";
 import { Montserrat, Newsreader } from "next/font/google";
 import Backdrop from "@/app/backdrop";
@@ -17,6 +15,7 @@ const newsreader = Newsreader({
 });
 
 export const metadata: Metadata = {
+    metadataBase: new URL("https://tinaw.me"),
     title: "canopy",
     description: "personal website",
 };
