@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { LeafIcon } from "@/app/anchors";
+import LeafIcon from "@/components/leaf-icon";
 
 const links = [
     { href: "mailto:txw@mit.edu", label: "email" },
@@ -32,10 +32,7 @@ export default function Navbar() {
                 )}
             </nav>
             <div className="pointer-events-none absolute right-0 bottom-0 left-0">
-                <div
-                    className="h-px w-full"
-                    style={{ background: "var(--rule)" }}
-                />
+                <div className="bg-rule h-px w-full" />
                 <span className="absolute -bottom-1.5 left-6 text-(--palm-leaf)">
                     <LeafIcon className="h-3 w-3" />
                 </span>

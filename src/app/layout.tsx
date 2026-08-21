@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat, Newsreader } from "next/font/google";
-import Backdrop from "@/app/backdrop";
+import Backdrop from "@/components/backdrop";
 import "./globals.css";
 
 const montserrat = Montserrat({

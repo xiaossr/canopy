@@ -7,8 +7,8 @@ type Img = { src: string; ts: Date; dayKey: string };
 export default function getImagesByCreation(
     subdir: string
 ): Record<string, Img[]> {
-    const IMG_DIR = path.join("public", subdir);
-    if (!fs.existsSync(IMG_DIR)) return {};
+    const imgDir = path.join("public", subdir);
+    if (!fs.existsSync(imgDir)) return {};
 
     const formatter = new Intl.DateTimeFormat("en-US", {
         year: "numeric",
@@ -16,7 +16,7 @@ export default function getImagesByCreation(
     });
 
     const imgs: Img[] = fs
-        .readdirSync(IMG_DIR)
+        .readdirSync(imgDir)
         .filter((f) => exts.has(path.extname(f).toLowerCase()))
         .sort((a, b) => b.localeCompare(a))
         .map((f) => {

@@ -20,6 +20,14 @@
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
+    --color-alabaster: var(--alabaster);
+    --color-thistle: var(--thistle);
+    --color-rosy-taupe: var(--rosy-taupe);
+    --color-palm-leaf: var(--palm-leaf);
+    --color-deep-teal: var(--deep-teal);
+    --color-ink: var(--ink);
+    --color-muted: var(--muted);
+    --color-rule: var(--rule);
     --font-sans: var(--font-montserrat);
     --font-serif: var(--font-newsreader);
     --font-title: "Montserrat", sans-serif;

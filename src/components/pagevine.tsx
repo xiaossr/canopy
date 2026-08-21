@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { LeafIcon } from "@/app/anchors";
+import LeafIcon from "@/components/leaf-icon";
 
 const LEAF_SPACING = 120;
 const FIRST_LEAF_OFFSET = 48;
@@ -82,7 +82,7 @@ export default function PageVine() {
                     pathLength={1}
                     strokeDasharray={1}
                     strokeDashoffset={1 - growth}
-                    style={{ transition: "stroke-dashoffset 180ms linear" }}
+                    className="transition-[stroke-dashoffset] duration-[180ms] ease-linear"
                 />
             </svg>
             {leafOffsets.map((offset, i) => (
