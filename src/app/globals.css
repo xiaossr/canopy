@@ -1,56 +1,56 @@
 @import "tailwindcss";
 
 :root {
-  /* base text and background */
-  --foreground: #22332c;
-  --background: #d5dfe5; /* Alabaster Grey wash */
+    /* base text and background */
+    --foreground: #22332c;
+    --background: #d5dfe5; /* Alabaster Grey wash */
 
-  /* nature palette */
-  --alabaster: #d5dfe5;
-  --thistle: #c9b1bd;
-  --rosy-taupe: #b49594;
-  --palm-leaf: #7f9172;
-  --deep-teal: #567568;
+    /* nature palette */
+    --alabaster: #d5dfe5;
+    --thistle: #c9b1bd;
+    --rosy-taupe: #b49594;
+    --palm-leaf: #7f9172;
+    --deep-teal: #567568;
 
-  --ink: #22332c;
-  --muted: #4a5f56;
-  --rule: #a9bfae;
+    --ink: #22332c;
+    --muted: #4a5f56;
+    --rule: #a9bfae;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-montserrat);
-  --font-serif: var(--font-newsreader);
-  --font-title: "Montserrat", sans-serif;
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-montserrat);
+    --font-serif: var(--font-newsreader);
+    --font-title: "Montserrat", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: var(--alabaster);
-    --foreground: var(--ink);
-  }
+    :root {
+        --background: var(--alabaster);
+        --foreground: var(--ink);
+    }
 }
 
 body {
-  color: var(--foreground);
-  font-family: Montserrat, Arial, Helvetica, sans-serif;
+    color: var(--foreground);
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
 
 html {
-  background: var(--background);
+    background: var(--background);
 }
 
 header.sticky {
-  margin-bottom: 3.5rem !important;
-  opacity: 1 !important;
+    margin-bottom: 3.5rem !important;
+    opacity: 1 !important;
 }
 
 a {
-  text-underline-offset: 3px;
+    text-underline-offset: 3px;
 }
 
 ::selection {
-  background: var(--thistle);
-  color: var(--ink);
+    background: var(--thistle);
+    color: var(--ink);
 }

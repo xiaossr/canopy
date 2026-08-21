@@ -4,7 +4,7 @@ import matter from "gray-matter";
 
 export type PostType = "projects" | "thoughts";
 function get_post_dir(post_type: PostType): string {
-    return path.join(process.cwd(), "src", "content", (post_type as string));
+    return path.join(process.cwd(), "src", "content", post_type as string);
 }
 
 export type Post = {

@@ -6,39 +6,43 @@ import getImagesByCreation from "@/app/gallery";
 import Footer from "@/app/footer";
 
 export default function ArtPage() {
-    const images = getImagesByCreation("art");
-    const dateKeys = Object.keys(images).reverse();
+  const images = getImagesByCreation("art");
+  const dateKeys = Object.keys(images).reverse();
 
-    return (
-    <div className="font-sans min-h-screen mx-auto max-w-4xl px-6 py-10 sm:py-16">
-        <Navbar />
-        <div className="relative lg:grid lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-10">
-            <PageVine />
-            <AnchorGutter />
-            <main className="max-w-3xl">
-                <header className="font-title text-4xl sm:text-5xl font-semibold tracking-tight text-left text-[color:var(--deep-teal)]">art</header>
-                <div className="justify-left items-left">
+  return (
+    <div className="mx-auto min-h-screen max-w-4xl px-6 py-10 font-sans sm:py-16">
+      <Navbar />
+      <div className="relative lg:grid lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-10">
+        <PageVine />
+        <AnchorGutter />
+        <main className="max-w-3xl">
+          <header className="font-title text-left text-4xl font-semibold tracking-tight text-[color:var(--deep-teal)] sm:text-5xl">
+            art
+          </header>
+          <div className="justify-left items-left">
             {dateKeys.map((day) => (
-                <section key={day}>
-                <h2 className="mt-8 mb-4 text-lg font-semibold text-[color:var(--rosy-taupe)]">{day}</h2>
-                <div className="flex flex-wrap gap-3 mx-5">
-                    {images[day].map((img) => (
-                        <Image
-                        key={img.src}
-                        src={img.src}
-                        alt=""
-                        width={450} // required by next/image but ignored when class sets size
-                        height={0}
-                        className="max-h-[250px] w-auto object-contain rounded-lg"
-                        />
-                    ))}
+              <section key={day}>
+                <h2 className="mt-8 mb-4 text-lg font-semibold text-[color:var(--rosy-taupe)]">
+                  {day}
+                </h2>
+                <div className="mx-5 flex flex-wrap gap-3">
+                  {images[day].map((img) => (
+                    <Image
+                      key={img.src}
+                      src={img.src}
+                      alt=""
+                      width={450} // required by next/image but ignored when class sets size
+                      height={0}
+                      className="max-h-[250px] w-auto rounded-lg object-contain"
+                    />
+                  ))}
                 </div>
-                </section>
+              </section>
             ))}
-                </div>
-            </main>
-        </div>
-        <Footer />
+          </div>
+        </main>
+      </div>
+      <Footer />
     </div>
-    );
+  );
 }

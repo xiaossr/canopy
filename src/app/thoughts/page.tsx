@@ -1,5 +1,5 @@
-import Navbar from "@/app/navbar"
-import AnchorGutter from "@/app/anchors"
+import Navbar from "@/app/navbar";
+import AnchorGutter from "@/app/anchors";
 import PageVine from "@/app/pagevine";
 import Footer from "@/app/footer";
 import Link from "next/link";
@@ -9,15 +9,18 @@ export default function WritingPage() {
     const entries = getAllPosts("thoughts");
 
     return (
-        <div className="font-sans min-h-screen mx-auto max-w-4xl px-6 py-10 sm:py-16">
+        <div className="mx-auto min-h-screen max-w-4xl px-6 py-10 font-sans sm:py-16">
             <Navbar />
             <div className="relative lg:grid lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-10">
                 <PageVine />
                 <AnchorGutter />
                 <main className="max-w-3xl">
-                    <header className="font-title text-4xl sm:text-5xl font-semibold tracking-tight text-left mb-8 text-[color:var(--deep-teal)]">writings</header>
-                    <p className="text-base leading-7 text-[color:var(--ink)] mb-10">
-                        Notes, half-formed ideas, and things I wanted to write down before I forgot them.
+                    <header className="font-title mb-8 text-left text-4xl font-semibold tracking-tight text-[color:var(--deep-teal)] sm:text-5xl">
+                        writings
+                    </header>
+                    <p className="mb-10 text-base leading-7 text-[color:var(--ink)]">
+                        Notes, half-formed ideas, and things I wanted to write
+                        down before I forgot them.
                     </p>
                     <ul className="flex flex-col gap-10">
                         {entries.map((post) => (
@@ -31,24 +34,30 @@ export default function WritingPage() {
                                     </Link>
                                 </h2>
                                 <div className="flex flex-wrap items-center gap-3 text-xs text-[color:var(--rosy-taupe)]">
-                                    <time dateTime={post.date}>{post.date}</time>
+                                    <time dateTime={post.date}>
+                                        {post.date}
+                                    </time>
                                     {post.tags.map((t) => (
                                         <span
                                             key={t}
                                             className="rounded-full border px-2 py-0.5 text-[color:var(--muted)]"
-                                            style={{ borderColor: "var(--rule)" }}
+                                            style={{
+                                                borderColor: "var(--rule)",
+                                            }}
                                         >
                                             {t}
                                         </span>
                                     ))}
                                 </div>
-                                <p className="text-base leading-7 text-[color:var(--ink)]">{post.summary}</p>
+                                <p className="text-base leading-7 text-[color:var(--ink)]">
+                                    {post.summary}
+                                </p>
                             </li>
                         ))}
                     </ul>
-            </main>
+                </main>
             </div>
             <Footer />
         </div>
-    )
+    );
 }

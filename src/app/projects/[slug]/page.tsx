@@ -36,14 +36,14 @@ export default async function PostPage({
     if (!post) notFound();
 
     return (
-        <div className="font-sans min-h-screen mx-auto max-w-4xl px-6 py-10 sm:py-16">
+        <div className="mx-auto min-h-screen max-w-4xl px-6 py-10 font-sans sm:py-16">
             <Navbar />
             <div className="relative lg:grid lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-10">
                 <PageVine />
                 <AnchorGutter />
                 <main className="max-w-3xl">
                     <article className="mt-6">
-                        <h1 className="font-title text-3xl sm:text-4xl font-semibold tracking-tight text-[color:var(--deep-teal)]">
+                        <h1 className="font-title text-3xl font-semibold tracking-tight text-[color:var(--deep-teal)] sm:text-4xl">
                             {post.title}
                         </h1>
                         <div className="mt-3 flex flex-wrap items-center gap-3 text-xs text-[color:var(--rosy-taupe)]">
