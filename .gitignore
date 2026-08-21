@@ -39,6 +39,3 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-# helpers python script for parsing dates into image names i dislike cloudflare
-/internal_helpers/

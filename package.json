@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "sync-images": "python internal_scripts/image_add_date.py"
   },
   "dependencies": {
     "@react-pdf-viewer/core": "^3.12.0",
