@@ -1,7 +1,6 @@
 import Navbar from "@/app/navbar"
 import AnchorGutter from "@/app/anchors";
 import PageVine from "@/app/pagevine";
-import Link from "next/link";
 import Footer from "@/app/footer";
 
 export default function Home() {
@@ -23,26 +22,6 @@ export default function Home() {
                     My goal is to experience myriads of different perspectives and ideas (and to share my own as well!).
                 </p>
             </section>
-            {/* <div className="flex flex-wrap gap-6 font-sans text-sm">
-                <Link 
-                    href="mailto:txw@mit.edu"
-                    className="text-[color:var(--muted)] underline decoration-[color:var(--thistle)] hover:text-[color:var(--deep-teal)] hover:decoration-[color:var(--rosy-taupe)]"
-                >
-                    email
-                </Link>
-                <Link 
-                    href="https://www.linkedin.com/in/tina-x-wang/"
-                    className="text-[color:var(--muted)] underline decoration-[color:var(--thistle)] hover:text-[color:var(--deep-teal)] hover:decoration-[color:var(--rosy-taupe)]"
-                >
-                    linkedin
-                </Link>
-                <Link 
-                    href="https://github.com/xiaossr"
-                    className="text-[color:var(--muted)] underline decoration-[color:var(--thistle)] hover:text-[color:var(--deep-teal)] hover:decoration-[color:var(--rosy-taupe)]"
-                >
-                    github
-                </Link>
-            </div> */}
           </main>
         </div>
         <Footer />
