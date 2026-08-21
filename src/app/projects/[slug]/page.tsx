@@ -3,9 +3,10 @@ import AnchorGutter from "@/app/anchors";
 import PageVine from "@/app/pagevine";
 import Footer from "@/app/footer";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/posts";
-import Markdown from "react-markdown";
+import { MDXRemote } from "next-mdx-remote/rsc";
 
 export function generateStaticParams() {
     const projects = getAllPosts("projects");
@@ -24,6 +25,34 @@ export async function generateMetadata({
         description: post?.summary,
     };
 }
+
+const mdxComponents = {
+    p: (props: React.ComponentProps<"p">) => <p className="mb-6" {...props} />,
+    h2: (props: React.ComponentProps<"h2">) => (
+        <h2 className="mt-8 mb-4 text-2xl font-bold" {...props} />
+    ),
+    a: ({ href, children, ...props }: React.ComponentProps<"a">) => (
+        <Link
+            href={href as string}
+            className="text-sm text-(--muted) underline decoration-(--thistle) hover:text-(--deep-teal) hover:decoration-(--rosy-taupe)"
+            {...props}
+        >
+            {children}
+        </Link>
+    ),
+    img: ({ src, alt }: React.ComponentProps<"img">) => (
+        <div className="relative my-8 h-100 w-full">
+            <Image
+                src={(src as string) || ""}
+                alt={(alt as string) || ""}
+                width={450} // required by next/image but ignored when class sets size
+                height={0}
+                className="max-h-62.5 w-auto rounded-lg object-contain"
+                loading="eager"
+            />
+        </div>
+    ),
+};
 
 export default async function PostPage({
     params,
@@ -59,15 +88,10 @@ export default async function PostPage({
                             ))}
                         </div>
                         <div className="mt-8 font-serif text-lg leading-8 text-(--ink)">
-                            <Markdown
-                                components={{
-                                    p: ({ node, ...props }) => (
-                                        <p className="mb-6" {...props} />
-                                    ),
-                                }}
-                            >
-                                {post.content}
-                            </Markdown>
+                            <MDXRemote
+                                source={post.content}
+                                components={mdxComponents}
+                            />
                         </div>
                     </article>
                     <Link
