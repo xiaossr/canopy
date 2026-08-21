@@ -15,10 +15,10 @@ export default function ProjectsPage() {
                 <PageVine />
                 <AnchorGutter />
                 <main className="max-w-3xl">
-                    <header className="font-title mb-8 text-left text-4xl font-semibold tracking-tight text-[color:var(--deep-teal)] sm:text-5xl">
+                    <header className="font-title mb-8 text-left text-4xl font-semibold tracking-tight text-(--deep-teal) sm:text-5xl">
                         projects
                     </header>
-                    <p className="mb-10 text-base leading-7 text-[color:var(--ink)]">
+                    <p className="mb-10 text-base leading-7 text-(--ink)">
                         Things I have built, in various states of finish.
                     </p>
                     <ul className="flex flex-col gap-10">
@@ -27,19 +27,19 @@ export default function ProjectsPage() {
                                 <h2 className="text-lg font-semibold">
                                     <Link
                                         href={`/projects/${post.slug}`}
-                                        className="text-[color:var(--deep-teal)] underline decoration-[color:var(--thistle)] hover:decoration-[color:var(--rosy-taupe)]"
+                                        className="text-(--deep-teal) underline decoration-(--thistle) hover:decoration-(--rosy-taupe)"
                                     >
                                         {post.title}
                                     </Link>
                                 </h2>
-                                <div className="flex flex-wrap items-center gap-3 text-xs text-[color:var(--rosy-taupe)]">
+                                <div className="flex flex-wrap items-center gap-3 text-xs text-(--rosy-taupe)">
                                     <time dateTime={post.date}>
                                         {post.date}
                                     </time>
                                     {post.tags.map((t) => (
                                         <span
                                             key={t}
-                                            className="rounded-full border px-2 py-0.5 text-[color:var(--muted)]"
+                                            className="rounded-full border px-2 py-0.5 text-(--muted)"
                                             style={{
                                                 borderColor: "var(--rule)",
                                             }}
@@ -48,7 +48,7 @@ export default function ProjectsPage() {
                                         </span>
                                     ))}
                                 </div>
-                                <p className="text-base leading-7 text-[color:var(--ink)]">
+                                <p className="text-base leading-7 text-(--ink)">
                                     {post.summary}
                                 </p>
                             </li>
