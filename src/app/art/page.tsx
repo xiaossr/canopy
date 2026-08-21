@@ -34,6 +34,7 @@ export default function ArtPage() {
                                             width={450} // required by next/image but ignored when class sets size
                                             height={0}
                                             className="max-h-62.5 w-auto rounded-lg object-contain"
+                                            loading="eager"
                                         />
                                     ))}
                                 </div>
