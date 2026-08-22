@@ -14,7 +14,7 @@ export default function Navbar() {
         <header className="bg-background relative top-0 z-50 mb-16 flex w-full items-center justify-between p-3 opacity-90">
             <Link
                 href="/"
-                className="text-(--deep-teal) transition-colors hover:text-(--palm-leaf)"
+                className="text-deep-teal hover:text-palm-leaf transition-colors"
             >
                 canopy .☘︎ ݁˖
             </Link>
@@ -24,7 +24,7 @@ export default function Navbar() {
                         <Link
                             key={href}
                             href={href}
-                            className={`mx-3 text-sm text-(--deep-teal) transition-colors hover:text-(--palm-leaf)`}
+                            className={`text-deep-teal hover:text-palm-leaf mx-3 text-sm transition-colors`}
                         >
                             {label}
                         </Link>
@@ -33,13 +33,13 @@ export default function Navbar() {
             </nav>
             <div className="pointer-events-none absolute right-0 bottom-0 left-0">
                 <div className="bg-rule h-px w-full" />
-                <span className="absolute -bottom-1.5 left-6 text-(--palm-leaf)">
+                <span className="text-palm-leaf absolute -bottom-1.5 left-6">
                     <LeafIcon className="h-3 w-3" />
                 </span>
-                <span className="absolute -bottom-1 left-1/3 rotate-12 text-(--rule)">
+                <span className="text-rule absolute -bottom-1 left-1/3 rotate-12">
                     <LeafIcon className="h-2.5 w-2.5" />
                 </span>
-                <span className="absolute right-10 -bottom-1.5 -rotate-12 text-(--palm-leaf)">
+                <span className="text-palm-leaf absolute right-10 -bottom-1.5 -rotate-12">
                     <LeafIcon className="h-3 w-3" />
                 </span>
             </div>

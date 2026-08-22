@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const linkClassName =
-    "text-sm text-(--muted) underline decoration-(--thistle) hover:text-(--deep-teal) hover:decoration-(--rosy-taupe)";
+    "text-sm text-muted underline decoration-thistle hover:text-deep-teal hover:decoration-rosy-taupe";
 
 export const mdxComponents = {
     p: (props: React.ComponentProps<"p">) => <p className="mb-6" {...props} />,

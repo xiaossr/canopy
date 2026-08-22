@@ -26,15 +26,15 @@ function NavLink({
             aria-current={active ? "page" : undefined}
             className={`group inline-flex items-center gap-2 transition-colors ${
                 active
-                    ? "font-medium text-(--deep-teal)"
-                    : "text-(--muted) hover:text-(--deep-teal)"
+                    ? "text-deep-teal font-medium"
+                    : "text-muted hover:text-deep-teal"
             }`}
         >
             <span
                 className={`transition-colors ${
                     active
-                        ? "text-(--rosy-taupe)"
-                        : "text-(--palm-leaf) group-hover:text-(--rosy-taupe)"
+                        ? "text-rosy-taupe"
+                        : "text-palm-leaf group-hover:text-rosy-taupe"
                 }`}
             >
                 <LeafIcon />
@@ -42,8 +42,8 @@ function NavLink({
             <span
                 className={`underline underline-offset-4 ${
                     active
-                        ? "decoration-(--thistle)"
-                        : "decoration-transparent group-hover:decoration-(--thistle)"
+                        ? "decoration-thistle"
+                        : "group-hover:decoration-thistle decoration-transparent"
                 }`}
             >
                 {label}

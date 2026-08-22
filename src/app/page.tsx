@@ -3,10 +3,10 @@ import PageShell from "@/components/page-shell";
 export default function Home() {
     return (
         <PageShell mainClassName="flex max-w-3xl flex-col gap-8 sm:items-start">
-            <header className="font-title text-left text-4xl font-semibold tracking-tight text-(--deep-teal) sm:text-5xl">
+            <header className="font-title text-deep-teal text-left text-4xl font-semibold tracking-tight sm:text-5xl">
                 tina wang
             </header>
-            <section className="font-sans text-base leading-7 text-(--ink)">
+            <section className="text-ink font-sans text-base leading-7">
                 <p className="my-5">
                     Hi! I&apos;m Tina, and I&apos;m currently a junior at MIT
                     studying computer science and engineering. I&apos;m

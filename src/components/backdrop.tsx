@@ -19,7 +19,7 @@ export default function Backdrop() {
 
             <svg
                 viewBox="0 0 200 200"
-                className="absolute -right-16 -bottom-16 h-104 w-104 text-(--deep-teal) opacity-[0.13] sm:h-136 sm:w-136"
+                className="text-deep-teal absolute -right-16 -bottom-16 h-104 w-104 opacity-[0.13] sm:h-136 sm:w-136"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"

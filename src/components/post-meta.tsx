@@ -7,13 +7,13 @@ export default function PostMeta({
 }: Pick<Post, "date" | "tags"> & { className?: string }) {
     return (
         <div
-            className={`flex flex-wrap items-center gap-3 text-xs text-(--rosy-taupe) ${className}`}
+            className={`text-rosy-taupe flex flex-wrap items-center gap-3 text-xs ${className}`}
         >
             <time dateTime={date}>{date}</time>
             {tags.map((t) => (
                 <span
                     key={t}
-                    className="border-rule rounded-full border px-2 py-0.5 text-(--muted)"
+                    className="border-rule text-muted rounded-full border px-2 py-0.5"
                 >
                     {t}
                 </span>

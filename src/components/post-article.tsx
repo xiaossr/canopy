@@ -22,11 +22,11 @@ export default function PostArticle({
     return (
         <PageShell>
             <article className="mt-6">
-                <h1 className="font-title text-3xl font-semibold tracking-tight text-(--deep-teal) sm:text-4xl">
+                <h1 className="font-title text-deep-teal text-3xl font-semibold tracking-tight sm:text-4xl">
                     {post.title}
                 </h1>
                 <PostMeta date={post.date} tags={post.tags} className="mt-3" />
-                <div className="mt-8 font-serif text-lg leading-8 text-(--ink)">
+                <div className="text-ink mt-8 font-serif text-lg leading-8">
                     <MDXRemote
                         source={post.content}
                         components={mdxComponents}
