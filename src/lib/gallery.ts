@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const exts = new Set([".jpg", ".jpeg", ".png"]);
-type Img = { src: string; ts: Date; dayKey: string };
+type Img = { src: string; ts: Date; yearKey: string };
 
 export default function getImagesByCreation(
     subdir: string
@@ -30,12 +30,12 @@ export default function getImagesByCreation(
                 ts = new Date(ds);
             }
 
-            const dayKey = formatter.format(ts);
-            return { src: `/art/${f}`, ts, dayKey };
+            const yearKey = formatter.format(ts);
+            return { src: `/art/${f}`, ts, yearKey };
         });
 
     return imgs.reduce<Record<string, Img[]>>((acc, img) => {
-        (acc[img.dayKey] ||= []).push(img);
+        (acc[img.yearKey] ||= []).push(img);
         return acc;
     }, {});
 }
